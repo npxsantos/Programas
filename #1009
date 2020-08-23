@@ -1,0 +1,12 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    char N;
+    double S, V;
+    scanf("%s", &N);
+    scanf("%lf %lf", &S, &V);
+    printf("TOTAL = R$ %.2lf\n", (S + V * 0.15));
+ 
+    return 0;
+}
