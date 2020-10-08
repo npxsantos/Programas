@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main(){
+	
+    int k = 0, inst, j, i, chave[k], v[] = {k}; 
+    int mat[9][9], sl[9] = {0,0,0,0,0,0,0,0,0} ,sc[9] = {0,0,0,0,0,0,0,0,0};;
+    
+	scanf("%d", &inst);
+
+    for(k = 0; k < inst; k++){
+  		for(j = 0; j < 9; j++){
+      		for(i = 0; i < 9; i++){
+      			scanf ("%d", &mat[ j ][ i ]);		
+      	 	}
+        }
+    }
+
+	for (k = 0; k < inst; k++){    
+    	for(j = 0; j < 9; j++){
+        	for(i = 0; i < 9; i++){
+            	sl[j] += mat[j][i];
+            	sc[i] += mat[j][i];
+            	v[k] = sl[j] / (k+1);
+        	}		
+    	}	
+		if(v[k] != 45){
+        	printf("Instancia %d\nNAO\n\n", k + 1);
+		} else { 
+			printf("Instancia %d\nSIM\n\n", k + 1);
+		}	
+	}
+  
+    return(0);
+    
+}
